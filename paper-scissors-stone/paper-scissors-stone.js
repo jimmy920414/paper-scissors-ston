@@ -51,12 +51,10 @@ function onclickPss(userChoice) {
 }
 
 function playGame() {
-    let pssButtons = document.querySelectorAll('.pssButton')
+    let pssButtons = document.querySelectorAll('.pssButton');
     pssButtons.forEach(pssButton => {
-        _value = pssButton.value
-        pssButton.onclick = () => onclickPss(_value)
-
-    })
+        pssButton.onclick = () => onclickPss(pssButton.innerText); 
+    });
 }
 playGame()
 
